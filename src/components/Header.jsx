@@ -44,24 +44,36 @@ const Header = () => {
 
           {/* Menü Öğeleri (Masaüstü) */}
           <nav>
-            <ul className="hidden md:flex space-x-8 text-gray-700 items-center h-20">
+            <ul className="hidden md:flex space-x-8 text-[#00215B] items-center h-20">
               <li>
-                <Link to="/" className="hover:underline text-lg">
+                <Link
+                  to="/"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:underline text-lg">
-                  About
+                <Link
+                  to="/about"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                >
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:underline text-lg">
+                <Link
+                  to="/services"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:underline text-lg">
+                <Link
+                  to="/contact"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                >
                   Contact
                 </Link>
               </li>
@@ -83,24 +95,36 @@ const Header = () => {
       {/* Mobil Açılır Menü */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md menu-container">
-          <ul className="flex flex-col space-y-4 p-4">
+          <ul className="flex flex-col space-y-4 p-4 text-[#00215B]">
             <li>
-              <Link to="/" className="hover:underline text-lg">
+              <Link
+                to="/"
+                className="text-lg hover:text-gray-500 transition-colors duration-300"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:underline text-lg">
-                About
+              <Link
+                to="/about"
+                className="text-lg hover:text-gray-500 transition-colors duration-300"
+              >
+                About Us
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:underline text-lg">
+              <Link
+                to="/services"
+                className="text-lg hover:text-gray-500 transition-colors duration-300"
+              >
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:underline text-lg">
+              <Link
+                to="/contact"
+                className="text-lg hover:text-gray-500 transition-colors duration-300"
+              >
                 Contact
               </Link>
             </li>
