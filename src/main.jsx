@@ -1,12 +1,17 @@
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
-import "./index.css";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import App from "./App"; 
+import Homepage from "./pages/Homepage"; 
+import About from "./pages/About"; 
 
-
-createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <Routes>
+      <Route path="/" element={<App />}>
+        {/* İçerik yönlendirme */}
+        <Route index element={<Homepage />} /> 
+        <Route path="about" element={<About />} /> 
+      </Route>
+    </Routes>
   </BrowserRouter>
 );

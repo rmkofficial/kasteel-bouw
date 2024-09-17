@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Kanit', sans-serif;
-  }
-  
+  font-family: "Kanit", sans-serif;
+}
+
+@import "@fortawesome/fontawesome-free/css/all.min.css";

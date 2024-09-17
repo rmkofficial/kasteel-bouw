@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Outlet } from "react-router-dom"; // İçerik yönlendirme için
+import { Outlet } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
 
       {/* Sayfa içeriği (Home, About, Services, Contact sayfaları) */}
       <main className="flex-grow">
-        <Outlet /> {/* İçerik burada gösterilecek */}
+        <Outlet /> 
       </main>
 
       {/* Footer */}

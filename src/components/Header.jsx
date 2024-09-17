@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Sayfa yönlendirmesi için kullanıyoruz
-import logo from "../assets/kasteel-logo.png"; // Logonuzu doğru yoldan ekleyin
+import { Link } from "react-router-dom";
+import logo from "../assets/kasteel-logo.png"; 
 
 const Header = () => {
   // Hamburger menü için state
@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <header>
-      {/* Menu Bar */}
+      {/* Menü Barı */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
           {/* Logo */}
@@ -48,33 +48,38 @@ const Header = () => {
               <li>
                 <Link
                   to="/"
-                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300 relative group"
                 >
                   Home
+                  {/* Hover Altında Çizgi */}
+                  <span className="block absolute left-0 bottom-0 w-0 group-hover:w-full h-1 bg-[#00215B] transition-all duration-500"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/about"
-                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300 relative group"
                 >
                   About Us
+                  <span className="block absolute left-0 bottom-0 w-0 group-hover:w-full h-1 bg-[#00215B] transition-all duration-500"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300 relative group"
                 >
                   Services
+                  <span className="block absolute left-0 bottom-0 w-0 group-hover:w-full h-1 bg-[#00215B] transition-all duration-500"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/contact"
-                  className="text-lg hover:text-gray-500 transition-colors duration-300"
+                  className="text-lg hover:text-gray-500 transition-colors duration-300 relative group"
                 >
                   Contact
+                  <span className="block absolute left-0 bottom-0 w-0 group-hover:w-full h-1 bg-[#00215B] transition-all duration-500"></span>
                 </Link>
               </li>
             </ul>
@@ -84,9 +89,9 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 focus:outline-none menu-button"
+              className="text-gray-950 focus:outline-none menu-button"
             >
-              <i className="fas fa-bars text-2xl"></i>
+              <i className="fas fa-bars text-2xl"></i> 
             </button>
           </div>
         </div>
@@ -100,6 +105,7 @@ const Header = () => {
               <Link
                 to="/"
                 className="text-lg hover:text-gray-500 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)} 
               >
                 Home
               </Link>
@@ -108,6 +114,7 @@ const Header = () => {
               <Link
                 to="/about"
                 className="text-lg hover:text-gray-500 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </Link>
@@ -116,6 +123,7 @@ const Header = () => {
               <Link
                 to="/services"
                 className="text-lg hover:text-gray-500 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
@@ -124,6 +132,7 @@ const Header = () => {
               <Link
                 to="/contact"
                 className="text-lg hover:text-gray-500 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
