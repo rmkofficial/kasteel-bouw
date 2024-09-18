@@ -2,7 +2,7 @@ const ServicesSection = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <div className="bg-white bg-opacity-85 shadow-lg rounded-lg p-8 max-w-md mx-auto ">
+        <div className="bg-white bg-opacity-90 shadow-lg rounded-lg p-8 max-w-md mx-auto ">
           {/* Başlık */}
           <h2 className="text-3xl font-bold text-[#00215B] mb-6">
             We Construct and Manage Places and Infrastructures
