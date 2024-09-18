@@ -6,12 +6,20 @@ import ContactSection from "../components/Contact/Contact";
 
 const Homepage = () => {
   return (
-    <div>
+    <div id="top">
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <ContactSection />
+      <section id="aboutSection">
+        <AboutSection />
+      </section>
+      <section id="servicesSection">
+        <ServicesSection />
+      </section>
+      <section id="projectsSection">
+        <ProjectsSection />
+      </section>
+      <section id="contactSection">
+        <ContactSection />
+      </section>
     </div>
   );
 };

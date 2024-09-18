@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 import logo from "../assets/kasteel-logo-2.png";
 
@@ -11,13 +11,18 @@ const Footer = () => {
           {/* Sol Taraf: Logo ve Açıklama */}
           <div className="flex flex-col items-center md:items-start md:justify-center">
             <div className="flex justify-center md:justify-center w-full ">
-              <Link to="/" className="cursor-pointer">
+              <ScrollLink
+                to="top"
+                smooth={true} 
+                duration={500} 
+                className="cursor-pointer"
+              >
                 <img
                   src={logo}
                   alt="Kasteel Bouw Logo"
                   className="h-20 w-auto"
                 />
-              </Link>
+              </ScrollLink>
             </div>
             <p className="text-sm text-center md:text-left">
               High level experience in web design and development knowledge,

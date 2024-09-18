@@ -3,7 +3,7 @@ import aboutImage2 from "../../assets/about-2.png";
 
 const AboutSection = () => {
   return (
-    <section className="mt-8 md:mt-12 lg:py-16 lg:mt-28 lg:mb-28 bg-white">
+    <section id="aboutSection" className="mt-8 md:mt-12 lg:py-16 lg:mt-28 lg:mb-28 bg-white">
       <div className="container mx-auto lg:mb-10 px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="lg:order-2 text-center lg:text-left text-[#00215B]">
           <h4 className="text-red-600 text-sm font-semibold uppercase mb-2">
