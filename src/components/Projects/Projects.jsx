@@ -36,12 +36,11 @@ const ProjectsSection = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white">
-                <h3 className="text-2xl font-bold mb-2">Commercial</h3>
-                <p className="text-lg">Benoit Architecture</p>
-                <button className="mt-4 px-4 py-2 bg-white text-blue-900 font-semibold rounded">
-                  +
-                </button>
+              <div className="text-center text-white px-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
+                  Commercial
+                </h3>
+                <p className="text-base md:text-lg">Benoit Architecture</p>
               </div>
             </div>
           </div>
@@ -54,12 +53,11 @@ const ProjectsSection = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white">
-                <h3 className="text-2xl font-bold mb-2">Infrastructure</h3>
-                <p className="text-lg">Modern Bridge</p>
-                <button className="mt-4 px-4 py-2 bg-white text-blue-900 font-semibold rounded">
-                  +
-                </button>
+              <div className="text-center text-white px-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
+                  Infrastructure
+                </h3>
+                <p className="text-base md:text-lg">Modern Bridge</p>
               </div>
             </div>
           </div>
@@ -72,12 +70,11 @@ const ProjectsSection = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white">
-                <h3 className="text-2xl font-bold mb-2">Construction</h3>
-                <p className="text-lg">Skyscraper Build</p>
-                <button className="mt-4 px-4 py-2 bg-white text-blue-900 font-semibold rounded">
-                  +
-                </button>
+              <div className="text-center text-white px-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
+                  Construction
+                </h3>
+                <p className="text-base md:text-lg">Skyscraper Build</p>
               </div>
             </div>
           </div>
@@ -90,12 +87,11 @@ const ProjectsSection = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white">
-                <h3 className="text-2xl font-bold mb-2">Industrial</h3>
-                <p className="text-lg">Factory</p>
-                <button className="mt-4 px-4 py-2 bg-white text-blue-900 font-semibold rounded">
-                  +
-                </button>
+              <div className="text-center text-white px-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
+                  Industrial
+                </h3>
+                <p className="text-base md:text-lg">Factory</p>
               </div>
             </div>
           </div>
@@ -108,12 +104,9 @@ const ProjectsSection = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white">
-                <h3 className="text-2xl font-bold mb-2">Urban</h3>
-                <p className="text-lg">City Planning</p>
-                <button className="mt-4 px-4 py-2 bg-white text-blue-900 font-semibold rounded">
-                  +
-                </button>
+              <div className="text-center text-white px-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">Urban</h3>
+                <p className="text-base md:text-lg">City Planning</p>
               </div>
             </div>
           </div>

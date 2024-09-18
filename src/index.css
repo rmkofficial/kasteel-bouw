@@ -6,4 +6,5 @@
 
 body {
   font-family: "Kanit", sans-serif;
+  overflow-x: hidden;
 }

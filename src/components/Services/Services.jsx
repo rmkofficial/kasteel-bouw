@@ -8,15 +8,15 @@ const ServicesComponent = () => {
   // Hangi kartın açık olduğunu kontrol eden state
   const [openCard, setOpenCard] = useState(0);
 
-  // Kart genişliği kontrolü ve opacity ayarı 
+  // Kart genişliği kontrolü ve opacity ayarı
   const isCardOpen = (index) => {
     return openCard === index
-      ? "md:w-1/2 w-full opacity-100"
-      : "md:w-1/6 w-full opacity-50";
+      ? "w-full md:w-1/2 opacity-100"
+      : "w-full md:w-1/6 opacity-50";
   };
 
   return (
-    <section className="py-16 mt-48">
+    <section className="py-24 hidden md:block">
       <div className="flex flex-col md:flex-row gap-4 md:gap-0">
         {/* Service 1 */}
         <div
@@ -37,9 +37,6 @@ const ServicesComponent = () => {
                   Nullam tincidunt libero ac augue eleifend, vitae condimentum
                   lacus.
                 </p>
-                <button className="mt-4 text-white bg-red-600 px-4 py-2 rounded">
-                  →
-                </button>
               </div>
             )}
           </div>
@@ -64,9 +61,6 @@ const ServicesComponent = () => {
                   Fusce id hendrerit lectus. Morbi vitae tortor sed turpis
                   feugiat.
                 </p>
-                <button className="mt-4 text-white bg-red-600 px-4 py-2 rounded">
-                  →
-                </button>
               </div>
             )}
           </div>
@@ -91,9 +85,6 @@ const ServicesComponent = () => {
                   Nullam tincidunt libero ac augue eleifend, vitae condimentum
                   lacus.
                 </p>
-                <button className="mt-4 text-white bg-red-600 px-4 py-2 rounded">
-                  →
-                </button>
               </div>
             )}
           </div>
@@ -115,9 +106,6 @@ const ServicesComponent = () => {
             {openCard === 3 && (
               <div className="mt-4 text-white">
                 <p>Vestibulum eget odio sit amet elit consequat imperdiet.</p>
-                <button className="mt-4 text-white bg-red-600 px-4 py-2 rounded">
-                  →
-                </button>
               </div>
             )}
           </div>

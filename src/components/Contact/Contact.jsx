@@ -26,40 +26,40 @@ const ContactSection = () => {
             <input
               type="text"
               name="fullName"
-              placeholder="Your Full Name"
-              className="p-4 border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
+              placeholder="Full Name"
+              className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="fullName" errors={state.errors} />
 
             <input
               type="email"
               name="email"
-              placeholder="Your Email Address"
-              className="p-4 border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
+              placeholder="Email Address"
+              className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="email" errors={state.errors} />
 
             <input
               type="text"
               name="phone"
-              placeholder="Your Phone Number"
-              className="p-4 border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
+              placeholder="Phone Number"
+              className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="phone" errors={state.errors} />
 
             <input
               type="text"
               name="address"
-              placeholder="Your Address"
-              className="p-4 border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
+              placeholder="Address"
+              className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="address" errors={state.errors} />
 
             <textarea
               name="message"
               rows="4"
-              placeholder="Enter Your Message Here..."
-              className="p-4 border border-gray-300 rounded-lg shadow-sm w-full col-span-2 focus:outline-none focus:border-red-600"
+              placeholder="Message..."
+              className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full col-span-2 focus:outline-none focus:border-red-600"
             ></textarea>
             <ValidationError field="message" errors={state.errors} />
           </div>
@@ -67,7 +67,7 @@ const ContactSection = () => {
           <button
             type="submit"
             disabled={state.submitting}
-            className="bg-red-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition duration-300"
+            className="bg-red-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition duration-300 w-full md:w-auto"
           >
             Submit Message →
           </button>
@@ -85,17 +85,17 @@ const ContactSection = () => {
         </div>
 
         {/* İletişim Bilgileri */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Adres Kartı */}
           <div className="flex items-center">
-            <div className="p-4 bg-red-600 text-white">
-              <FaMapMarkerAlt size={40} />
+            <div className="p-3 bg-red-600 text-white rounded-md flex-shrink-0">
+              <FaMapMarkerAlt size={30} />
             </div>
             <div className="ml-4">
-              <h4 className="text-sm font-semibold uppercase text-gray-500">
+              <h4 className="text-xs font-semibold uppercase text-gray-500">
                 Company Address
               </h4>
-              <p className="text-lg font-bold text-gray-800">
+              <p className="text-base font-bold text-gray-800">
                 Themeforest, Envato HQ <br />
                 24 Fifth st., Los Angeles, USA
               </p>
@@ -104,31 +104,35 @@ const ContactSection = () => {
 
           {/* Telefon Kartı */}
           <div className="flex items-center">
-            <div className="p-4  bg-blue-600 text-white">
-              <FaPhoneAlt size={40} />
+            <div className="p-3  bg-blue-600 text-white rounded-md flex-shrink-0">
+              <FaPhoneAlt size={30} />
             </div>
             <div className="ml-4">
-              <h4 className="text-sm font-semibold uppercase text-gray-500">
+              <h4 className="text-xs font-semibold uppercase text-gray-500">
                 Company Phones
               </h4>
-              <p className="text-lg font-bold text-gray-800">+1 234 5678 098</p>
-              <p className="text-lg font-bold text-gray-800">+1 634 7638 654</p>
+              <p className="text-base font-bold text-gray-800">
+                +1 234 5678 098
+              </p>
+              <p className="text-base font-bold text-gray-800">
+                +1 634 7638 654
+              </p>
             </div>
           </div>
 
           {/* E-posta Kartı */}
           <div className="flex items-center">
-            <div className="p-4 bg-red-600 text-white">
-              <FaEnvelope size={40} />
+            <div className="p-3 bg-red-600 text-white rounded-md flex-shrink-0">
+              <FaEnvelope size={30} />
             </div>
             <div className="ml-4">
-              <h4 className="text-sm font-semibold uppercase text-gray-500">
+              <h4 className="text-xs font-semibold uppercase text-gray-500">
                 DUSTRO Emails
               </h4>
-              <p className="text-lg font-bold text-gray-800">
+              <p className="text-base font-bold text-gray-800">
                 dustro@gmail.com
               </p>
-              <p className="text-lg font-bold text-gray-800">
+              <p className="text-base font-bold text-gray-800">
                 dustro.info@gmail.com
               </p>
             </div>

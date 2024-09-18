@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll"; // react-scroll'den Link bileşeni
+import { Link as ScrollLink } from "react-scroll"; 
 import logo from "../assets/kasteel-logo.png";
 
 const Header = () => {
@@ -31,14 +31,14 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header>
+    <header className="relative z-20">
       {/* Menü Barı */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center">
             <ScrollLink
-              to="top" 
+              to="top"
               smooth={true}
               duration={500}
               className="cursor-pointer"
@@ -52,9 +52,9 @@ const Header = () => {
             <ul className="hidden md:flex space-x-8 text-[#00215B] items-center h-20">
               <li>
                 <ScrollLink
-                  to="aboutSection" 
-                  smooth={true} 
-                  duration={500} 
+                  to="aboutSection"
+                  smooth={true}
+                  duration={500}
                   className="text-lg hover:text-gray-500 transition-colors duration-300 relative group cursor-pointer"
                 >
                   About Us
@@ -64,7 +64,7 @@ const Header = () => {
               </li>
               <li>
                 <ScrollLink
-                  to="projectsSection" 
+                  to="projectsSection"
                   smooth={true}
                   duration={500}
                   className="text-lg hover:text-gray-500 transition-colors duration-300 relative group cursor-pointer"
@@ -75,7 +75,7 @@ const Header = () => {
               </li>
               <li>
                 <ScrollLink
-                  to="contactSection" 
+                  to="contactSection"
                   smooth={true}
                   duration={500}
                   className="text-lg hover:text-gray-500 transition-colors duration-300 relative group cursor-pointer"
@@ -101,7 +101,7 @@ const Header = () => {
 
       {/* Mobil Açılır Menü */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-md menu-container">
+        <div className="md:hidden bg-white shadow-md menu-container absolute top-20 left-0 w-full z-30">
           <ul className="flex flex-col space-y-4 p-4 text-[#00215B]">
             <li>
               <ScrollLink
