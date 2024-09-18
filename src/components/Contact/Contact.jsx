@@ -85,58 +85,51 @@ const ContactSection = () => {
         </div>
 
         {/* İletişim Bilgileri */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Adres Kartı */}
-          <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
-            <div className="p-4 bg-red-600 text-white rounded-full">
-              <FaMapMarkerAlt size={24} />
+          <div className="flex items-center">
+            <div className="p-4 bg-red-600 text-white">
+              <FaMapMarkerAlt size={40} />
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-2">Company Address</h4>
-              <p>
-                Kasteel Bouw <br />
-                Bierens de Haanstraat 35 <br />
-                1064 NC Amsterdam
+            <div className="ml-4">
+              <h4 className="text-sm font-semibold uppercase text-gray-500">
+                Company Address
+              </h4>
+              <p className="text-lg font-bold text-gray-800">
+                Themeforest, Envato HQ <br />
+                24 Fifth st., Los Angeles, USA
               </p>
             </div>
           </div>
 
           {/* Telefon Kartı */}
-          <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
-            <div className="p-4 bg-red-600 text-white rounded-full">
-              <FaPhoneAlt size={24} />
+          <div className="flex items-center">
+            <div className="p-4  bg-blue-600 text-white">
+              <FaPhoneAlt size={40} />
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-2">Company Phones</h4>
-              <p>
-                <a href="tel:+31201234567" className="hover:underline">
-                  +31 20 123 4567
-                </a>
-              </p>
-              <p>
-                <a href="tel:+31612345678" className="hover:underline">
-                  +31 6 1234 5678
-                </a>
-              </p>
+            <div className="ml-4">
+              <h4 className="text-sm font-semibold uppercase text-gray-500">
+                Company Phones
+              </h4>
+              <p className="text-lg font-bold text-gray-800">+1 234 5678 098</p>
+              <p className="text-lg font-bold text-gray-800">+1 634 7638 654</p>
             </div>
           </div>
 
           {/* E-posta Kartı */}
-          <div className="bg-white p-6 rounded-lg shadow-lg flex items-start space-x-4">
-            <div className="p-4 bg-blue-600 text-white rounded-full">
-              <FaEnvelope size={24} />
+          <div className="flex items-center">
+            <div className="p-4 bg-red-600 text-white">
+              <FaEnvelope size={40} />
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-2">
-                Kasteel Bouw Emails
+            <div className="ml-4">
+              <h4 className="text-sm font-semibold uppercase text-gray-500">
+                DUSTRO Emails
               </h4>
-              <p>
-                <a
-                  href="mailto:Kasteelbouwnl@gmail.com"
-                  className="hover:underline"
-                >
-                  Kasteelbouwnl@gmail.com
-                </a>
+              <p className="text-lg font-bold text-gray-800">
+                dustro@gmail.com
+              </p>
+              <p className="text-lg font-bold text-gray-800">
+                dustro.info@gmail.com
               </p>
             </div>
           </div>
