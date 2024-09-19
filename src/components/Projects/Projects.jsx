@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import projectImage1 from "../../assets/IMG_1758.png";
+import projectImage1 from "../../assets/IMG_1758-min.png";
 import projectVideo2 from "../../assets/2.mp4";
 import projectVideo3 from "../../assets/3.mp4";
 import projectVideo1 from "../../assets/4.mp4"; // Proje 4 videosu
