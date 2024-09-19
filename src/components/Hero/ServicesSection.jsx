@@ -3,63 +3,55 @@ const ServicesSection = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="bg-white bg-opacity-90 shadow-lg rounded-lg p-8 max-w-md mx-auto ">
-          {/* Başlık */}
           <h2 className="text-3xl font-bold text-[#00215B] mb-6">
-            We Construct and Manage Places and Infrastructures
+            We bouwen en beheren plaatsen en infrastructuren
           </h2>
 
-          {/* İçerik*/}
           <div className="space-y-4">
-            {/* General Contract */}
             <div className="flex">
               <div className="text-red-600 text-5xl mr-4">
-                {/* Icon */}
-                <i className="fas fa-tools"></i>
+                <i className="fas fa-paint-roller"></i>{" "}
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#00215B]">
-                  Sıva Hizmetleri
+                  Pleisterwerkdiensten
                 </h3>
                 <p className="text-gray-600">
-                  Duvarlarınız ve tavanlarınız için pürüzsüz, modern bir bitiş
-                  sunuyoruz. Kasteel Bouw, profesyonel sıva çözümleriyle
-                  hayalinizdeki alanları gerçeğe dönüştürüyor.
+                  Wij bieden een gladde, moderne afwerking voor uw muren en
+                  plafonds. Kasteel Bouw transformeert uw droomruimtes met
+                  professionele pleisteroplossingen.
                 </p>
               </div>
             </div>
 
-            {/* Project Planning */}
             <div className="flex">
               <div className="text-red-600 text-5xl mr-4">
-                {/* Icon */}
-                <i className="fas fa-drafting-compass"></i>
+                <i className="fas fa-palette"></i>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#00215B]">
-                  Dekoratif Sıva
+                  Decoratief pleisterwerk
                 </h3>
                 <p className="text-gray-600">
-                  Alanlarınızı kişiselleştirmenin en iyi yolu! Dekoratif sıva
-                  hizmetlerimizle duvarlarınıza benzersiz dokular ve tasarımlar
-                  kazandırıyoruz.
+                  De beste manier om uw ruimtes te personaliseren! Met onze
+                  decoratieve pleisterdiensten brengen we unieke texturen en
+                  ontwerpen op uw muren.
                 </p>
               </div>
             </div>
 
-            {/* Refurbishment */}
             <div className="flex">
               <div className="text-red-600 text-5xl mr-4">
-                {/* Icon */}
                 <i className="fas fa-hammer"></i>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#00215B]">
-                  Restorasyon ve Yenileme
+                  Restauratie en renovatie
                 </h3>
                 <p className="text-gray-600">
-                  Eski binalarınızı yeni gibi yapmak bizim işimiz! Tarihi
-                  sıvanın korunması ve onarılması konusunda uzman ekibimizle
-                  binalarınızı yeniden canlandırıyoruz.
+                  Het is ons werk om uw oude gebouwen weer als nieuw te maken!
+                  Ons deskundige team herstelt en behoudt historische
+                  pleisterlagen en brengt uw gebouwen weer tot leven.
                 </p>
               </div>
             </div>

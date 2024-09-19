@@ -6,41 +6,30 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactSection = () => {
   const [state, handleSubmit] = useForm("movazgow");
 
-  // Form başarıyla gönderildiğinde Toastify ile bildirim göster
   if (state.succeeded) {
-    toast.success("Mesaj başarıyla gönderildi!");
+    toast.success("Bericht is succesvol verzonden!");
   }
 
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
-        {/* Toastify Container */}
         <ToastContainer />
 
-        {/* İletişim Başlığı */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-red-600">İletişim Kurun</h2>{" "}
-          {/* Başlığı biraz daha büyüttüm */}
-          {/* Birinci Bölüm */}
+          <h2 className="text-4xl font-bold text-red-600">Neem Contact Op</h2>
           <p className="text-xl font-semibold text-blue-900 mt-4">
-            Hayalinizdeki projeyi başlatmaya hazır mısınız?
-          </p>{" "}
-          {/* Açıklama metnini büyüttüm ve font ağırlığını artırdım */}
-          {/* İkinci Bölüm */}
+            Klaar om uw droomproject te starten?
+          </p>
           <p className="text-lg text-blue-800 mt-4">
-            Ücretsiz bir teklif veya danışmanlık için bugün bizimle iletişime
-            geçin.
-          </p>{" "}
-          {/* Bu metin de bir tık daha büyük oldu, ana metin olarak dengeli */}
-          {/* Üçüncü Bölüm */}
+            Neem vandaag nog contact met ons op voor een gratis offerte of
+            advies.
+          </p>
           <p className="text-lg text-gray-800 mt-4">
-            Ekibimiz, tüm sorularınızı yanıtlamak ve doğru seçimleri yapmanıza
-            yardımcı olmak için hazırdır.
-          </p>{" "}
-          {/* Diğer metinle uyumlu olacak şekilde düzenlendi */}
+            Ons team staat klaar om al uw vragen te beantwoorden en u te helpen
+            de juiste keuzes te maken.
+          </p>
         </div>
 
-        {/* İletişim Formu */}
         <form
           onSubmit={handleSubmit}
           className="bg-white p-6 rounded-lg shadow-lg mb-10"
@@ -49,7 +38,7 @@ const ContactSection = () => {
             <input
               type="text"
               name="fullName"
-              placeholder="Ad Soyad"
+              placeholder="Naam"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="fullName" errors={state.errors} />
@@ -57,7 +46,7 @@ const ContactSection = () => {
             <input
               type="email"
               name="email"
-              placeholder="E-posta Adresi"
+              placeholder="E-mailadres"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="email" errors={state.errors} />
@@ -65,7 +54,7 @@ const ContactSection = () => {
             <input
               type="text"
               name="phone"
-              placeholder="Telefon Numarası"
+              placeholder="Telefoonnummer"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="phone" errors={state.errors} />
@@ -81,7 +70,7 @@ const ContactSection = () => {
             <textarea
               name="message"
               rows="4"
-              placeholder="Mesaj..."
+              placeholder="Bericht..."
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full col-span-2 focus:outline-none focus:border-red-600"
             ></textarea>
             <ValidationError field="message" errors={state.errors} />
@@ -92,11 +81,11 @@ const ContactSection = () => {
             disabled={state.submitting}
             className="bg-red-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition duration-300 w-full md:w-auto"
           >
-            Mesaj Gönder →
+            Bericht Versturen →
           </button>
         </form>
 
-        {/* Harita */}
+        {/* Google Map */}
         <div className="mt-10">
           <iframe
             className="w-full h-80 rounded-lg shadow-md"
@@ -107,57 +96,65 @@ const ContactSection = () => {
           ></iframe>
         </div>
 
-        {/* İletişim Bilgileri */}
+        {/* Contact Info */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {/* Adres Kartı */}
+          {/* Address Card */}
           <div className="flex items-center">
             <div className="p-3 bg-red-600 text-white rounded-md flex-shrink-0">
               <FaMapMarkerAlt size={30} />
             </div>
             <div className="ml-4">
               <h4 className="text-xs font-semibold uppercase text-gray-500">
-                Şirket Adresi
+                Bedrijfsadres
               </h4>
               <p className="text-base font-bold text-gray-800">
                 Kasteel Bouw
                 <br />
-                Amsterdam, Hollanda
+                Bierens de Haanstraat 35
+                <br />
+                1064 NC Amsterdam, Nederland
               </p>
             </div>
           </div>
 
-          {/* Telefon Kartı */}
+          {/* Phone Card */}
           <div className="flex items-center">
             <div className="p-3 bg-blue-600 text-white rounded-md flex-shrink-0">
               <FaPhoneAlt size={30} />
             </div>
             <div className="ml-4">
               <h4 className="text-xs font-semibold uppercase text-gray-500">
-                Telefon Numaralarımız
+                Onze Telefoonnummers
               </h4>
               <p className="text-base font-bold text-gray-800">
-                +31 20 123 4567
+                <a href="tel:+31624962109" className="hover:text-red-600">
+                  0624962109
+                </a>
               </p>
               <p className="text-base font-bold text-gray-800">
-                +31 20 765 4321
+                <a href="tel:+31687629686" className="hover:text-red-600">
+                  0687629686
+                </a>
               </p>
             </div>
           </div>
 
-          {/* E-posta Kartı */}
+          {/* Email Card */}
           <div className="flex items-center">
             <div className="p-3 bg-red-600 text-white rounded-md flex-shrink-0">
               <FaEnvelope size={30} />
             </div>
             <div className="ml-4">
               <h4 className="text-xs font-semibold uppercase text-gray-500">
-                E-posta Adreslerimiz
+                Onze E-mailadressen
               </h4>
               <p className="text-base font-bold text-gray-800">
-                info@kasteelbouw.nl
-              </p>
-              <p className="text-base font-bold text-gray-800">
-                support@kasteelbouw.nl
+                <a
+                  href="mailto:Kasteelbouwnl@gmail.com"
+                  className="hover:text-red-600"
+                >
+                  Kasteelbouwnl@gmail.com
+                </a>
               </p>
             </div>
           </div>

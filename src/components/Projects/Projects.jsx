@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
-import projectImage1 from "../../assets/IMG_1758-min.png";
+import projectImage1 from "../../assets/1.png";
 import projectVideo2 from "../../assets/2.mp4";
 import projectVideo3 from "../../assets/3.mp4";
-import projectVideo1 from "../../assets/4.mp4"; // Proje 4 videosu
-import projectVideo2b from "../../assets/5.mp4"; // Proje 5 videosu
-import projectImage2 from "../../assets/project-2.png"; // Proje 2 için resim
-import projectImage3 from "../../assets/project-2.png"; // Proje 3 için resim
-import projectImage4 from "../../assets/project-2.png"; // Proje 4 için resim
-import projectImage5 from "../../assets/project-2.png"; // Proje 5 için resim
+import projectVideo1 from "../../assets/4.mp4";
+import projectVideo2b from "../../assets/5.mp4";
+import projectImage2 from "../../assets/project-1.png";
+import projectImage3 from "../../assets/project-2.jpg";
+import projectImage4 from "../../assets/project-3.jpg";
+import projectImage5 from "../../assets/project-4.jpg";
 
 const ProjectsSection = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // 768px ve altındaki ekranlar mobil kabul ediliyor
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // İlk render'da ekran genişliğini kontrol et
-    window.addEventListener("resize", handleResize); // Ekran boyutu değiştiğinde kontrol et
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -29,19 +29,17 @@ const ProjectsSection = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <h4 className="text-red-600 text-xs sm:text-sm font-semibold uppercase mb-2 text-center">
-          Our Works
+          Onze Werken
         </h4>
         <h2 className="text-2xl sm:text-4xl font-bold text-[#00215B] mb-8 text-center">
-          Our Special Projects
+          Onze Speciale Projecten
         </h2>
 
-        {/* Grid Yapısı */}
         <div
           className={`grid gap-4 ${
             isMobile ? "grid-cols-2" : "grid-cols-3 grid-rows-2"
           }`}
         >
-          {/* Proje 1 - Sadece mobilde görünmeyecek */}
           {!isMobile && (
             <div className="relative group row-span-2">
               <img
@@ -52,18 +50,17 @@ const ProjectsSection = () => {
               <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
                 <div className="text-center text-white px-4">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
-                    Dış Cephe Yenileme
+                    Gevelrenovatie
                   </h3>
                   <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                    Dış cephe kaplama ve sıva işlemleri, bina yalıtımı ve
-                    estetik dokunuşlar
+                    Gevelbekleding en pleisterwerk, isolatie en esthetische
+                    afwerkingen
                   </p>
                 </div>
               </div>
             </div>
           )}
 
-          {/* Proje 2 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
             {isMobile ? (
               <img
@@ -83,16 +80,15 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  İç Mekan Düzenleme
+                  Binnenhuisrenovatie
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Yenilenen duvarlar, sıva uygulamaları ve raf sistemleri
+                  Vernieuwde muren, pleisterwerk en plankensystemen
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Proje 3 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
             {isMobile ? (
               <img
@@ -112,17 +108,16 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  Duvar Sıva ve Düzleme
+                  Muurpleister en Egaliseren
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  İç ve dış mekanlarda duvar sıvası, düzgün yüzeyler oluşturma
-                  ve dekoratif sıva uygulamaları
+                  Pleisterwerk binnen en buiten, gladde oppervlakken en
+                  decoratieve pleistertoepassingen
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Proje 4 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
             {isMobile ? (
               <img
@@ -142,16 +137,15 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  İnşaat ve Yapısal Çalışmalar
+                  Bouw- en Structuurwerken
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Yapısal duvar çalışmaları ve inşaat yenilemeleri
+                  Structurele muurwerken en renovaties
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Proje 5 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
             {isMobile ? (
               <img
@@ -171,11 +165,11 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  Dekoratif Sıva Uygulamaları
+                  Decoratieve Pleistertoepassingen
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Sıva uygulamalarında detaylı işçilik ve özel yüzey
-                  tasarımları.
+                  Gedetailleerd vakmanschap en unieke oppervlaktedesigns in
+                  pleisterwerk
                 </p>
               </div>
             </div>

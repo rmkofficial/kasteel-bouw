@@ -1,19 +1,16 @@
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll"; 
+import { Link as ScrollLink } from "react-scroll";
 import logo from "../assets/kasteel-logo.png";
 
 const Header = () => {
-  // Hamburger menü için state
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Boşluğa tıklandığında menünün kapanmasını sağlayan fonksiyon
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Eğer menü açıksa ve menünün dışına tıklandıysa menüyü kapat
       if (
         isMenuOpen &&
         !event.target.closest(".menu-container") &&
@@ -32,10 +29,8 @@ const Header = () => {
 
   return (
     <header className="relative z-20">
-      {/* Menü Barı */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
-          {/* Logo */}
           <div className="flex items-center">
             <ScrollLink
               to="top"
@@ -47,7 +42,6 @@ const Header = () => {
             </ScrollLink>
           </div>
 
-          {/* Menü Öğeleri (Masaüstü) */}
           <nav>
             <ul className="hidden md:flex space-x-8 text-[#00215B] items-center h-20">
               <li>
@@ -57,8 +51,7 @@ const Header = () => {
                   duration={500}
                   className="text-lg hover:text-gray-500 transition-colors duration-300 relative group cursor-pointer"
                 >
-                  About Us
-                  {/* Hover Altında Çizgi */}
+                  Over ons
                   <span className="block absolute left-0 bottom-0 w-0 group-hover:w-full h-1 bg-[#00215B] transition-all duration-500"></span>
                 </ScrollLink>
               </li>
@@ -69,7 +62,7 @@ const Header = () => {
                   duration={500}
                   className="text-lg hover:text-gray-500 transition-colors duration-300 relative group cursor-pointer"
                 >
-                  Services
+                  Diensten
                   <span className="block absolute left-0 bottom-0 w-0 group-hover:w-full h-1 bg-[#00215B] transition-all duration-500"></span>
                 </ScrollLink>
               </li>
@@ -87,7 +80,6 @@ const Header = () => {
             </ul>
           </nav>
 
-          {/* Mobil Menü (Hamburger İkonu) */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -99,7 +91,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobil Açılır Menü */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md menu-container absolute top-20 left-0 w-full z-30">
           <ul className="flex flex-col space-y-4 p-4 text-[#00215B]">
@@ -111,7 +102,7 @@ const Header = () => {
                 className="text-lg hover:text-gray-500 transition-colors duration-300 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About Us
+                Over ons
               </ScrollLink>
             </li>
             <li>
@@ -122,7 +113,7 @@ const Header = () => {
                 className="text-lg hover:text-gray-500 transition-colors duration-300 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                Diensten
               </ScrollLink>
             </li>
             <li>

@@ -9,15 +9,15 @@ const HeroSection = () => {
         backgroundImage: `url(${heroImage})`,
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-5"></div>{" "}
-      <div className="container mx-auto px-4 py-16 md:py-72 relative z-10 text-white flex flex-col justify-start h-screen pt-72">
+      <div className="absolute inset-0 bg-black opacity-25"></div>
+      <div className="container mx-auto px-4 py-16 lg:pt-20 md:py-72 relative z-10 text-white flex flex-col justify-start h-screen pt-72">
         <div className="max-w-3xl text-left">
           <h1 className="text-3xl lg:text-6xl font-bold">
-            Sıva ustalığı ve kalitesi için güvenilir ortağınız!
+            Uw betrouwbare partner voor pleisterwerk en kwaliteit!
           </h1>
           <p className="mt-4 text-xl lg:text-2xl">
-            Kasteel Bouw olarak, 15 yılı aşkın deneyimimizle kaliteli sıva
-            hizmetleri sunuyoruz.
+            Bij Kasteel Bouw bieden we kwalitatieve pleisterwerkdiensten met
+            meer dan 15 jaar ervaring.
           </p>
         </div>
       </div>

@@ -9,9 +9,8 @@ const App = () => {
       {/* Header */}
       <Header />
 
-      {/* Sayfa içeriği (Home, About, Services, Contact sayfaları) */}
       <main className="flex-grow">
-        <Outlet /> 
+        <Outlet />
       </main>
 
       {/* Footer */}

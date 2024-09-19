@@ -1,8 +1,8 @@
 import Slider from "react-slick";
 import serviceImage1 from "../../assets/service.png";
-import serviceImage2 from "../../assets/workers-6762542_1280.jpg";
-import serviceImage3 from "../../assets/electrician-installer-with-tool-his-hands-working-with-cable-construction-site.jpg";
-import serviceImage4 from "../../assets/bricklayer-worker-installing-brick-masonry-exterior-wall-with-trowel-putty-knife.jpg";
+import serviceImage2 from "../../assets/service2.jpg";
+import serviceImage3 from "../../assets/service3.jpg";
+import serviceImage4 from "../../assets/service4.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
