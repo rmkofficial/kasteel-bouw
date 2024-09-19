@@ -1,8 +1,8 @@
-import projectImage1 from "../../assets/project-1.png";
-import projectImage2 from "../../assets/project-2.png";
-import projectImage3 from "../../assets/project-2.png";
-import projectImage4 from "../../assets/project-2.png";
-import projectImage5 from "../../assets/project-2.png";
+import projectImage1 from "../../assets/IMG_1758.png";
+import projectVideo2 from "../../assets/2.mp4";
+import projectVideo3 from "../../assets/3.mp4";
+import projectVideo1 from "../../assets/4.mp4"; // Proje 4 videosu
+import projectVideo2b from "../../assets/5.mp4"; // Proje 5 videosu
 
 const ProjectsSection = () => {
   return (
@@ -45,12 +45,17 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 2 */}
-          <div className="relative group" style={{ gridArea: "project2" }}>
-            <img
-              src={projectImage2}
-              alt="Project 2"
+          {/* Proje 2 - Video */}
+          <div
+            className="relative group aspect-[3/2]"
+            style={{ gridArea: "project2" }}
+          >
+            <video
+              src={projectVideo2}
               className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
@@ -62,12 +67,17 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 3 */}
-          <div className="relative group" style={{ gridArea: "project3" }}>
-            <img
-              src={projectImage3}
-              alt="Project 3"
+          {/* Proje 3 - Video */}
+          <div
+            className="relative group aspect-[3/2]"
+            style={{ gridArea: "project3" }}
+          >
+            <video
+              src={projectVideo3}
               className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
@@ -79,12 +89,17 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 4 */}
-          <div className="relative group" style={{ gridArea: "project4" }}>
-            <img
-              src={projectImage4}
-              alt="Project 4"
+          {/* Proje 4 - Video */}
+          <div
+            className="relative group aspect-[3/2]"
+            style={{ gridArea: "project4" }}
+          >
+            <video
+              src={projectVideo1}
               className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
@@ -96,12 +111,17 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 5 */}
-          <div className="relative group" style={{ gridArea: "project5" }}>
-            <img
-              src={projectImage5}
-              alt="Project 5"
+          {/* Proje 5 - Video */}
+          <div
+            className="relative group aspect-[3/2]"
+            style={{ gridArea: "project5" }}
+          >
+            <video
+              src={projectVideo2b}
               className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
             />
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
