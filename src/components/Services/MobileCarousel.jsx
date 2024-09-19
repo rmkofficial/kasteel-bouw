@@ -20,90 +20,90 @@ const MobileCarousel = () => {
 
   return (
     <div className="block md:hidden mt-16 px-4">
-      {/* Sadece mobilde gösterilecek carousel */}
       <style>{`
         .slick-dots li button:before {
-          font-size: 16px; /* Nokta boyutu */
-          color: red; /* Nokta rengi */
+          font-size: 16px;
+          color: red;
         }
 
         .slick-dots li.slick-active button:before {
-          color: blue; /* Aktif nokta rengi */
+          color: blue;
         }
       `}</style>
       <Slider {...settings}>
-        {/* Service 1 */}
+        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage1}
-              alt="Service 1"
+              alt="Hizmet 1"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
-            <h3 className="text-2xl font-bold">Tecrübe ve Güven</h3>
+            <h3 className="text-2xl font-bold">Ervaring en Vertrouwen</h3>
             <p>
-              Kasteel Bouw olarak 15 yılı aşkın süredir inşaat ve sıva
-              projelerinde lideriz. Güvenilir ve deneyimli ekibimizle
-              projelerinizi en yüksek standartlarda tamamlıyoruz.
+              Bij Kasteel Bouw zijn we al meer dan 15 jaar toonaangevend in
+              bouw- en pleisterprojecten. Met ons betrouwbare en ervaren team
+              leveren we uw projecten af volgens de hoogste normen.
             </p>
           </div>
         </div>
 
-        {/* Service 2 */}
+        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage2}
-              alt="Service 2"
+              alt="Hizmet 2"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
-            <h3 className="text-2xl font-bold">Uzmanlık ve Kalite</h3>
+            <h3 className="text-2xl font-bold">Expertise en Kwaliteit</h3>
             <p>
-              Sıva ustalığında uzmanlaşmış ekibimiz, her projede detaylara önem
-              vererek kaliteli sonuçlar sunar. Her zaman müşteri memnuniyetini
-              önceliklendiriyoruz.
+              Ons team van pleisterexperts levert hoogwaardige resultaten door
+              aandacht te besteden aan elk detail in elk project. We stellen
+              klanttevredenheid altijd voorop.
             </p>
           </div>
         </div>
 
-        {/* Service 3 */}
+        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage3}
-              alt="Service 3"
+              alt="Hizmet 3"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
-            <h3 className="text-2xl font-bold">Yenilikçi Çözümler</h3>
+            <h3 className="text-2xl font-bold">Innovatieve Oplossingen</h3>
             <p>
-              Kasteel Bouw, müşterilerinin ihtiyaçlarına göre özelleştirilmiş ve
-              yenilikçi sıva çözümleri sunar. Sizi bir adım öne çıkaracak
-              hizmetlerle yanınızdayız.
+              Kasteel Bouw biedt op maat gemaakte en innovatieve
+              pleisteroplossingen die zijn afgestemd op de behoeften van onze
+              klanten. We staan klaar met diensten die u een stap vooruit
+              helpen.
             </p>
           </div>
         </div>
 
-        {/* Service 4 */}
+        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage4}
-              alt="Service 4"
+              alt="Hizmet 4"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
-            <h3 className="text-2xl font-bold">Zamanında Teslimat</h3>
+            <h3 className="text-2xl font-bold">Tijdige Levering</h3>
             <p>
-              Projelerinizi zamanında ve bütçe dahilinde tamamlayarak
-              beklentilerinizi aşmayı hedefliyoruz. Kalite ve hız bizim
-              önceliğimizdir.
+              We streven ernaar om uw projecten op tijd en binnen budget te
+              voltooien, terwijl we uw verwachtingen overtreffen. Kwaliteit en
+              snelheid zijn onze prioriteit.
             </p>
           </div>
         </div>

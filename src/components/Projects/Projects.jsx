@@ -46,6 +46,7 @@ const ProjectsSection = () => {
                 src={projectImage1}
                 alt="Project 1"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
                 <div className="text-center text-white px-4">
@@ -67,6 +68,7 @@ const ProjectsSection = () => {
                 src={projectImage2}
                 alt="Project 2"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             ) : (
               <video
@@ -95,6 +97,7 @@ const ProjectsSection = () => {
                 src={projectImage3}
                 alt="Project 3"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             ) : (
               <video
@@ -124,6 +127,7 @@ const ProjectsSection = () => {
                 src={projectImage4}
                 alt="Project 4"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             ) : (
               <video
