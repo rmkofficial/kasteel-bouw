@@ -7,7 +7,7 @@ import projectVideo2b from "../../assets/5.mp4"; // Proje 5 videosu
 import projectImage2 from "../../assets/project-2.png"; // Proje 2 için resim
 import projectImage3 from "../../assets/project-2.png"; // Proje 3 için resim
 import projectImage4 from "../../assets/project-2.png"; // Proje 4 için resim
-import projectImage5 from "../../assets/project-2.png";// Proje 5 için resim
+import projectImage5 from "../../assets/project-2.png"; // Proje 5 için resim
 
 const ProjectsSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -36,26 +36,32 @@ const ProjectsSection = () => {
         </h2>
 
         {/* Grid Yapısı */}
-        <div className="grid grid-cols-3 grid-rows-2 gap-4">
-          {/* Proje 1 - 2 satırı kapsayan */}
-          <div className="relative group row-span-2">
-            <img
-              src={projectImage1}
-              alt="Project 1"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white px-4">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
-                  Dış Cephe Yenileme
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Dış cephe kaplama ve sıva işlemleri, bina yalıtımı ve estetik
-                  dokunuşlar
-                </p>
+        <div
+          className={`grid gap-4 ${
+            isMobile ? "grid-cols-2" : "grid-cols-3 grid-rows-2"
+          }`}
+        >
+          {/* Proje 1 - Sadece mobilde görünmeyecek */}
+          {!isMobile && (
+            <div className="relative group row-span-2">
+              <img
+                src={projectImage1}
+                alt="Project 1"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
+                    Dış Cephe Yenileme
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg hidden lg:block">
+                    Dış cephe kaplama ve sıva işlemleri, bina yalıtımı ve
+                    estetik dokunuşlar
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Proje 2 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
