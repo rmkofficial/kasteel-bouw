@@ -8,7 +8,7 @@ const ContactSection = () => {
 
   // Form başarıyla gönderildiğinde Toastify ile bildirim göster
   if (state.succeeded) {
-    toast.success("Message submitted successfully!");
+    toast.success("Mesaj başarıyla gönderildi!");
   }
 
   return (
@@ -16,6 +16,29 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         {/* Toastify Container */}
         <ToastContainer />
+
+        {/* İletişim Başlığı */}
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-red-600">İletişim Kurun</h2>{" "}
+          {/* Başlığı biraz daha büyüttüm */}
+          {/* Birinci Bölüm */}
+          <p className="text-xl font-semibold text-blue-900 mt-4">
+            Hayalinizdeki projeyi başlatmaya hazır mısınız?
+          </p>{" "}
+          {/* Açıklama metnini büyüttüm ve font ağırlığını artırdım */}
+          {/* İkinci Bölüm */}
+          <p className="text-lg text-blue-800 mt-4">
+            Ücretsiz bir teklif veya danışmanlık için bugün bizimle iletişime
+            geçin.
+          </p>{" "}
+          {/* Bu metin de bir tık daha büyük oldu, ana metin olarak dengeli */}
+          {/* Üçüncü Bölüm */}
+          <p className="text-lg text-gray-800 mt-4">
+            Ekibimiz, tüm sorularınızı yanıtlamak ve doğru seçimleri yapmanıza
+            yardımcı olmak için hazırdır.
+          </p>{" "}
+          {/* Diğer metinle uyumlu olacak şekilde düzenlendi */}
+        </div>
 
         {/* İletişim Formu */}
         <form
@@ -26,7 +49,7 @@ const ContactSection = () => {
             <input
               type="text"
               name="fullName"
-              placeholder="Full Name"
+              placeholder="Ad Soyad"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="fullName" errors={state.errors} />
@@ -34,7 +57,7 @@ const ContactSection = () => {
             <input
               type="email"
               name="email"
-              placeholder="Email Address"
+              placeholder="E-posta Adresi"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="email" errors={state.errors} />
@@ -42,7 +65,7 @@ const ContactSection = () => {
             <input
               type="text"
               name="phone"
-              placeholder="Phone Number"
+              placeholder="Telefon Numarası"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="phone" errors={state.errors} />
@@ -50,7 +73,7 @@ const ContactSection = () => {
             <input
               type="text"
               name="address"
-              placeholder="Address"
+              placeholder="Adres"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="address" errors={state.errors} />
@@ -58,7 +81,7 @@ const ContactSection = () => {
             <textarea
               name="message"
               rows="4"
-              placeholder="Message..."
+              placeholder="Mesaj..."
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full col-span-2 focus:outline-none focus:border-red-600"
             ></textarea>
             <ValidationError field="message" errors={state.errors} />
@@ -69,7 +92,7 @@ const ContactSection = () => {
             disabled={state.submitting}
             className="bg-red-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition duration-300 w-full md:w-auto"
           >
-            Submit Message →
+            Mesaj Gönder →
           </button>
         </form>
 
@@ -93,29 +116,30 @@ const ContactSection = () => {
             </div>
             <div className="ml-4">
               <h4 className="text-xs font-semibold uppercase text-gray-500">
-                Company Address
+                Şirket Adresi
               </h4>
               <p className="text-base font-bold text-gray-800">
-                Themeforest, Envato HQ <br />
-                24 Fifth st., Los Angeles, USA
+                Kasteel Bouw
+                <br />
+                Amsterdam, Hollanda
               </p>
             </div>
           </div>
 
           {/* Telefon Kartı */}
           <div className="flex items-center">
-            <div className="p-3  bg-blue-600 text-white rounded-md flex-shrink-0">
+            <div className="p-3 bg-blue-600 text-white rounded-md flex-shrink-0">
               <FaPhoneAlt size={30} />
             </div>
             <div className="ml-4">
               <h4 className="text-xs font-semibold uppercase text-gray-500">
-                Company Phones
+                Telefon Numaralarımız
               </h4>
               <p className="text-base font-bold text-gray-800">
-                +1 234 5678 098
+                +31 20 123 4567
               </p>
               <p className="text-base font-bold text-gray-800">
-                +1 634 7638 654
+                +31 20 765 4321
               </p>
             </div>
           </div>
@@ -127,13 +151,13 @@ const ContactSection = () => {
             </div>
             <div className="ml-4">
               <h4 className="text-xs font-semibold uppercase text-gray-500">
-                DUSTRO Emails
+                E-posta Adreslerimiz
               </h4>
               <p className="text-base font-bold text-gray-800">
-                dustro@gmail.com
+                info@kasteelbouw.nl
               </p>
               <p className="text-base font-bold text-gray-800">
-                dustro.info@gmail.com
+                support@kasteelbouw.nl
               </p>
             </div>
           </div>

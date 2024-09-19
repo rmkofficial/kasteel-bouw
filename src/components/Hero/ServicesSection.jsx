@@ -18,11 +18,12 @@ const ServicesSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#00215B]">
-                  General Contract
+                  Sıva Hizmetleri
                 </h3>
                 <p className="text-gray-600">
-                  Quisque condimentum erat ac orci blandit, in sollicitudin
-                  tellus vestibulum.
+                  Duvarlarınız ve tavanlarınız için pürüzsüz, modern bir bitiş
+                  sunuyoruz. Kasteel Bouw, profesyonel sıva çözümleriyle
+                  hayalinizdeki alanları gerçeğe dönüştürüyor.
                 </p>
               </div>
             </div>
@@ -35,10 +36,12 @@ const ServicesSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#00215B]">
-                  Project Planning
+                  Dekoratif Sıva
                 </h3>
                 <p className="text-gray-600">
-                  Nullam commodo tincidunt nisl, nec vehicula dui interdum nec.
+                  Alanlarınızı kişiselleştirmenin en iyi yolu! Dekoratif sıva
+                  hizmetlerimizle duvarlarınıza benzersiz dokular ve tasarımlar
+                  kazandırıyoruz.
                 </p>
               </div>
             </div>
@@ -51,11 +54,12 @@ const ServicesSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#00215B]">
-                  Refurbishment
+                  Restorasyon ve Yenileme
                 </h3>
                 <p className="text-gray-600">
-                  Sed vitae aliquet ipsum, ut ornare lectus. Proin sed sem
-                  risus. Sed nunc.
+                  Eski binalarınızı yeni gibi yapmak bizim işimiz! Tarihi
+                  sıvanın korunması ve onarılması konusunda uzman ekibimizle
+                  binalarınızı yeniden canlandırıyoruz.
                 </p>
               </div>
             </div>

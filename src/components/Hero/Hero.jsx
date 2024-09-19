@@ -13,11 +13,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16 md:py-72 relative z-10 text-white flex flex-col justify-start h-screen pt-72">
         <div className="max-w-3xl text-left">
           <h1 className="text-3xl lg:text-6xl font-bold">
-            Construction solution for everyone
+            Sıva ustalığı ve kalitesi için güvenilir ortağınız!
           </h1>
           <p className="mt-4 text-xl lg:text-2xl">
-            In id sem non bibendum pretium sit amet non nunc. Vivamus volutpat
-            venenatis vehicula.
+            Kasteel Bouw olarak, 15 yılı aşkın deneyimimizle kaliteli sıva
+            hizmetleri sunuyoruz.
           </p>
         </div>
       </div>

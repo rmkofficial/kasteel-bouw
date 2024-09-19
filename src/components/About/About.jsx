@@ -12,16 +12,19 @@ const AboutSection = () => {
             About Us
           </h4>
           <h2 className="text-4xl font-bold mb-4">
-            With our knowledge we guarantee success
+            Bilgimizle Başarıyı Garanti Ediyoruz
           </h2>
           <p className="text-lg mb-2">
-            Fusce id hendrerit lectus. Morbi vitae tortor sed turpis feugiat
-            congue
+            Kasteel Bouw olarak, 15 yılı aşkın tecrübemiz ve uzmanlığımızla
+            inşaat ve sıva projelerinde en yüksek kaliteyi sunuyoruz. Ekibimiz,
+            her projeyi zamanında ve mükemmel bir şekilde tamamlamayı taahhüt
+            eder.
           </p>
           <p className="text-gray-600 mb-6">
-            Cras tincidunt tellus at mi tristique rhoncus. Etiam dapibus rutrum
-            leo consectetur accumsan. Vivamus viverra ante turpis, dignissim
-            condimentum elit egestas sit amet. Phasellus faucibus pellentesque.
+            Projelerimizde her zaman müşteri memnuniyetini ön planda tutuyor,
+            detaylara verdiğimiz önemle başarılı sonuçlar elde ediyoruz.
+            Kaliteli işçilik ve titiz planlamayla, hayallerinizi gerçeğe
+            dönüştürmek için buradayız.
           </p>
         </div>
 
