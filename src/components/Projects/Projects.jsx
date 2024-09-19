@@ -1,10 +1,30 @@
+import { useState, useEffect } from "react";
 import projectImage1 from "../../assets/IMG_1758.png";
 import projectVideo2 from "../../assets/2.mp4";
 import projectVideo3 from "../../assets/3.mp4";
 import projectVideo1 from "../../assets/4.mp4"; // Proje 4 videosu
 import projectVideo2b from "../../assets/5.mp4"; // Proje 5 videosu
+import projectImage2 from "../../assets/project-2.png"; // Proje 2 için resim
+import projectImage3 from "../../assets/project-2.png"; // Proje 3 için resim
+import projectImage4 from "../../assets/project-2.png"; // Proje 4 için resim
+import projectImage5 from "../../assets/project-2.png";// Proje 5 için resim
 
 const ProjectsSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // 768px ve altındaki ekranlar mobil kabul ediliyor
+    };
+
+    handleResize(); // İlk render'da ekran genişliğini kontrol et
+    window.addEventListener("resize", handleResize); // Ekran boyutu değiştiğinde kontrol et
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -37,15 +57,23 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 2 - Video */}
+          {/* Proje 2 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
-            <video
-              src={projectVideo2}
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-            />
+            {isMobile ? (
+              <img
+                src={projectImage2}
+                alt="Project 2"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={projectVideo2}
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+            )}
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
@@ -58,15 +86,23 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 3 - Video */}
+          {/* Proje 3 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
-            <video
-              src={projectVideo3}
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-            />
+            {isMobile ? (
+              <img
+                src={projectImage3}
+                alt="Project 3"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={projectVideo3}
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+            )}
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
@@ -80,15 +116,23 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 4 - Video */}
+          {/* Proje 4 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
-            <video
-              src={projectVideo1}
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-            />
+            {isMobile ? (
+              <img
+                src={projectImage4}
+                alt="Project 4"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={projectVideo1}
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+            )}
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
@@ -101,15 +145,23 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          {/* Proje 5 - Video */}
+          {/* Proje 5 - Video (mobilde resim) */}
           <div className="relative group aspect-[3/2]">
-            <video
-              src={projectVideo2b}
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-            />
+            {isMobile ? (
+              <img
+                src={projectImage5}
+                alt="Project 5"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={projectVideo2b}
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              />
+            )}
             <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
               <div className="text-center text-white px-4">
                 <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">

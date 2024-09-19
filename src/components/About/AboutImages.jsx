@@ -9,6 +9,9 @@ const AboutImages = () => {
           src={aboutImage1}
           alt="Construction"
           className="w-full lg:w-[380px] md:w-[260px] h-auto object-cover rounded-lg"
+          loading="lazy"
+          width="380"
+          height="auto"
         />
       </div>
       <div className="hidden md:block lg:absolute lg:top-[-50px] md:top-[10px] md:left-[-80px] lg:left-28 bg-white shadow-lg p-2 rounded-lg">
@@ -16,6 +19,9 @@ const AboutImages = () => {
           src={aboutImage2}
           alt="Construction"
           className="w-full lg:w-[250px] md:w-[200px] h-auto object-cover rounded-lg"
+          loading="lazy"
+          width="250"
+          height="auto"
         />
       </div>
     </div>
