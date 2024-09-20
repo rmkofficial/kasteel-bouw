@@ -19,6 +19,7 @@ const Footer = () => {
                   src={logo}
                   alt="Kasteel Bouw Logo"
                   className="h-20 w-auto"
+                  loading="lazy"
                 />
               </ScrollLink>
             </div>
@@ -37,6 +38,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Voer je e-mailadres in"
+                aria-label="E-mailadres invoeren"
                 className="px-4 py-2 rounded-md text-gray-800 focus:outline-none"
               />
               <button className="px-4 py-2 bg-white text-gray-800 font-semibold rounded-md hover:bg-gray-300">
@@ -52,15 +54,40 @@ const Footer = () => {
                 href="https://www.instagram.com/kasteelbouw/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="cursor-pointer"
               >
                 <FaInstagram className="text-2xl hover:text-gray-400" />
               </a>
-              <FaFacebookF className="text-2xl hover:text-gray-400" />
-              <FaTwitter className="text-2xl hover:text-gray-400" />
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="cursor-pointer"
+              >
+                <FaFacebookF className="text-2xl hover:text-gray-400" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="cursor-pointer"
+              >
+                <FaTwitter className="text-2xl hover:text-gray-400" />
+              </a>
             </div>
-            <p className="mt-4 text-sm">0624962109</p>
-            <p className="mt-4 text-sm">0687629686</p>
+            <p className="mt-4 text-sm">
+              <a href="tel:0624962109" className="hover:underline">
+                0624962109
+              </a>
+            </p>
+            <p className="mt-4 text-sm">
+              <a href="tel:0687629686" className="hover:underline">
+                0687629686
+              </a>
+            </p>
           </div>
         </div>
 

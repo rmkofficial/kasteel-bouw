@@ -18,12 +18,18 @@ const ServicesComponent = () => {
       <div className="flex flex-col md:flex-row gap-4 md:gap-0">
         {/* Service 1 */}
         <div
-          className={`relative h-96 bg-cover bg-center cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
+          className={`relative h-96 cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
             0
-          )}`}
-          style={{ backgroundImage: `url(${serviceImage1})` }}
+          )} will-change`}
+          aria-expanded={openCard === 0 ? "true" : "false"}
           onClick={() => setOpenCard(openCard === 0 ? null : 0)}
         >
+          <img
+            src={serviceImage1}
+            alt="Ervaring en Vertrouwen - Bouwprojecten"
+            className="w-full h-full object-cover absolute inset-0 z-0"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="relative z-10 p-8">
             <h3 className="text-white text-2xl font-bold mb-4">
@@ -43,12 +49,18 @@ const ServicesComponent = () => {
 
         {/* Service 2 */}
         <div
-          className={`relative h-96 bg-cover bg-center cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
+          className={`relative h-96 cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
             1
-          )}`}
-          style={{ backgroundImage: `url(${serviceImage2})` }}
+          )} will-change`}
+          aria-expanded={openCard === 1 ? "true" : "false"}
           onClick={() => setOpenCard(openCard === 1 ? null : 1)}
         >
+          <img
+            src={serviceImage2}
+            alt="Expertise en Kwaliteit"
+            className="w-full h-full object-cover absolute inset-0 z-0"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="relative z-10 p-8">
             <h3 className="text-white text-2xl font-bold mb-4">
@@ -68,12 +80,18 @@ const ServicesComponent = () => {
 
         {/* Service 3 */}
         <div
-          className={`relative h-96 bg-cover bg-center cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
+          className={`relative h-96 cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
             2
-          )}`}
-          style={{ backgroundImage: `url(${serviceImage3})` }}
+          )} will-change`}
+          aria-expanded={openCard === 2 ? "true" : "false"}
           onClick={() => setOpenCard(openCard === 2 ? null : 2)}
         >
+          <img
+            src={serviceImage3}
+            alt="Innovatieve Oplossingen"
+            className="w-full h-full object-cover absolute inset-0 z-0"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="relative z-10 p-8">
             <h3 className="text-white text-2xl font-bold mb-4">
@@ -94,12 +112,18 @@ const ServicesComponent = () => {
 
         {/* Service 4 */}
         <div
-          className={`relative h-96 bg-cover bg-center cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
+          className={`relative h-96 cursor-pointer transition-all duration-500 ease-in-out ${isCardOpen(
             3
-          )}`}
-          style={{ backgroundImage: `url(${serviceImage4})` }}
+          )} will-change`}
+          aria-expanded={openCard === 3 ? "true" : "false"}
           onClick={() => setOpenCard(openCard === 3 ? null : 3)}
         >
+          <img
+            src={serviceImage4}
+            alt="Tijdige Levering"
+            className="w-full h-full object-cover absolute inset-0 z-0"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="relative z-10 p-8">
             <h3 className="text-white text-2xl font-bold mb-4">

@@ -20,15 +20,26 @@ const Header = () => {
       }
     };
 
+    const handleKeyDown = (event) => {
+      if (isMenuOpen && event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [isMenuOpen]);
 
   return (
     <header className="relative z-20">
+      <a href="#main-content" className="sr-only focus:not-sr-only">
+        Skip to Content
+      </a>
       <div className="bg-white shadow-sm">
         <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
@@ -38,7 +49,12 @@ const Header = () => {
               duration={500}
               className="cursor-pointer"
             >
-              <img src={logo} alt="Kasteel Bouw Logo" className="h-20 w-auto" />
+              <img
+                src={logo}
+                alt="Kasteel Bouw Logo"
+                className="h-20 w-auto"
+                loading="lazy"
+              />
             </ScrollLink>
           </div>
 
@@ -84,6 +100,7 @@ const Header = () => {
             <button
               onClick={toggleMenu}
               className="text-gray-950 focus:outline-none menu-button"
+              aria-expanded={isMenuOpen ? "true" : "false"}
             >
               <i className="fas fa-bars text-2xl"></i>
             </button>

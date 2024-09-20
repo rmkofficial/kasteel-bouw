@@ -16,6 +16,7 @@ const MobileCarousel = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
+    pauseOnHover: true, 
   };
 
   return (
@@ -31,13 +32,15 @@ const MobileCarousel = () => {
         }
       `}</style>
       <Slider {...settings}>
-        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage1}
-              alt="Hizmet 1"
+              srcSet={`${serviceImage1} 480w, ${serviceImage1} 800w, ${serviceImage1} 1200w`}
+              sizes="(max-width: 768px) 480px, (max-width: 1200px) 800px, 1200px"
+              alt="Ervaring en Vertrouwen - 15 jaar ervaring in bouw- en pleisterprojecten"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
@@ -50,13 +53,15 @@ const MobileCarousel = () => {
           </div>
         </div>
 
-        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage2}
-              alt="Hizmet 2"
+              srcSet={`${serviceImage2} 480w, ${serviceImage2} 800w, ${serviceImage2} 1200w`}
+              sizes="(max-width: 768px) 480px, (max-width: 1200px) 800px, 1200px"
+              alt="Expertise en Kwaliteit - Pleisterexperts"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
@@ -69,13 +74,15 @@ const MobileCarousel = () => {
           </div>
         </div>
 
-        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage3}
-              alt="Hizmet 3"
+              srcSet={`${serviceImage3} 480w, ${serviceImage3} 800w, ${serviceImage3} 1200w`}
+              sizes="(max-width: 768px) 480px, (max-width: 1200px) 800px, 1200px"
+              alt="Innovatieve Oplossingen - Maatwerk pleisteroplossingen"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">
@@ -89,13 +96,15 @@ const MobileCarousel = () => {
           </div>
         </div>
 
-        
         <div className="relative">
           <div className="w-full h-64">
             <img
               src={serviceImage4}
-              alt="Hizmet 4"
+              srcSet={`${serviceImage4} 480w, ${serviceImage4} 800w, ${serviceImage4} 1200w`}
+              sizes="(max-width: 768px) 480px, (max-width: 1200px) 800px, 1200px"
+              alt="Tijdige Levering - Kwaliteit en snelheid"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <div className="absolute bottom-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full">

@@ -1,11 +1,13 @@
+import { lazy, Suspense } from "react";
 import heroImage from "../../assets/hero-min.jpg";
-import ServicesSection from "./ServicesSection";
+const ServicesSection = lazy(() => import("./ServicesSection"));
 
 const HeroSection = () => {
   return (
     <section
       className="relative bg-cover bg-center h-[50vh] sm:h-[50vh] md:h-[75vh] lg:h-screen flex items-center"
       style={{
+        backgroundColor: "#000",
         backgroundImage: `url(${heroImage})`,
       }}
     >
@@ -22,7 +24,9 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="absolute bottom-[-200px] left-[450px] right-0 z-20 hidden lg:block">
-        <ServicesSection />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ServicesSection />
+        </Suspense>
       </div>
     </section>
   );
