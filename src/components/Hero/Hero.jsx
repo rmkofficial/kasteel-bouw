@@ -1,4 +1,4 @@
-import heroImage from "../../assets/hero-min.png";
+import heroImage from "../../assets/hero-min.jpg";
 import ServicesSection from "./ServicesSection";
 
 const HeroSection = () => {

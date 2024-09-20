@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import serviceImage1 from "../../assets/service.png";
+import serviceImage1 from "../../assets/service.jpg";
 import serviceImage2 from "../../assets/service2.jpg";
 import serviceImage3 from "../../assets/service3.jpg";
 import serviceImage4 from "../../assets/service4.jpg";

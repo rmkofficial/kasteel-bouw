@@ -4,13 +4,15 @@ import projectVideo2 from "../../assets/2.mp4";
 import projectVideo3 from "../../assets/3.mp4";
 import projectVideo1 from "../../assets/4.mp4";
 import projectVideo2b from "../../assets/5.mp4";
-import projectImage2 from "../../assets/project-1.png";
-import projectImage3 from "../../assets/project-2.jpg";
-import projectImage4 from "../../assets/project-3.jpg";
-import projectImage5 from "../../assets/project-4.jpg";
 
 const ProjectsSection = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [videoStates, setVideoStates] = useState({
+    video2: false,
+    video3: false,
+    video1: false,
+    video2b: false,
+  });
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,6 +26,15 @@ const ProjectsSection = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleVideoClick = (videoKey) => {
+    if (isMobile) {
+      setVideoStates((prevState) => ({
+        ...prevState,
+        [videoKey]: !prevState[videoKey],
+      }));
+    }
+  };
 
   return (
     <section className="py-16">
@@ -62,121 +73,142 @@ const ProjectsSection = () => {
             </div>
           )}
 
-          <div className="relative group aspect-[3/2]">
-            {isMobile ? (
-              <img
-                src={projectImage2}
-                alt="Project 2"
+          <div
+            className="relative group aspect-[3/2]"
+            onClick={() => handleVideoClick("video2")}
+          >
+            {videoStates.video2 || !isMobile ? (
+              <video
+                src={projectVideo2}
                 className="w-full h-full object-cover"
-                loading="lazy"
+                controls={isMobile}
+                autoPlay={!isMobile}
+                loop={!isMobile}
+                muted={!isMobile}
               />
             ) : (
               <video
                 src={projectVideo2}
                 className="w-full h-full object-cover"
-                autoPlay
-                loop
                 muted
               />
             )}
-            <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white px-4">
-                <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  Binnenhuisrenovatie
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Vernieuwde muren, pleisterwerk en plankensystemen
-                </p>
+            {!isMobile && (
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
+                    Binnenhuisrenovatie
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg hidden lg:block">
+                    Vernieuwde muren, pleisterwerk en plankensystemen
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
-          <div className="relative group aspect-[3/2]">
-            {isMobile ? (
-              <img
-                src={projectImage3}
-                alt="Project 3"
+          <div
+            className="relative group aspect-[3/2]"
+            onClick={() => handleVideoClick("video3")}
+          >
+            {videoStates.video3 || !isMobile ? (
+              <video
+                src={projectVideo3}
                 className="w-full h-full object-cover"
-                loading="lazy"
+                controls={isMobile}
+                autoPlay={!isMobile}
+                loop={!isMobile}
+                muted={!isMobile}
               />
             ) : (
               <video
                 src={projectVideo3}
                 className="w-full h-full object-cover"
-                autoPlay
-                loop
                 muted
               />
             )}
-            <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white px-4">
-                <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  Muurpleister en Egaliseren
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Pleisterwerk binnen en buiten, gladde oppervlakken en
-                  decoratieve pleistertoepassingen
-                </p>
+            {!isMobile && (
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
+                    Muurpleister en Egaliseren
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg hidden lg:block">
+                    Pleisterwerk binnen en buiten, gladde oppervlakken en
+                    decoratieve pleistertoepassingen
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
-          <div className="relative group aspect-[3/2]">
-            {isMobile ? (
-              <img
-                src={projectImage4}
-                alt="Project 4"
+          <div
+            className="relative group aspect-[3/2]"
+            onClick={() => handleVideoClick("video1")}
+          >
+            {videoStates.video1 || !isMobile ? (
+              <video
+                src={projectVideo1}
                 className="w-full h-full object-cover"
-                loading="lazy"
+                controls={isMobile}
+                autoPlay={!isMobile}
+                loop={!isMobile}
+                muted={!isMobile}
               />
             ) : (
               <video
                 src={projectVideo1}
                 className="w-full h-full object-cover"
-                autoPlay
-                loop
                 muted
               />
             )}
-            <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white px-4">
-                <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  Bouw- en Structuurwerken
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Structurele muurwerken en renovaties
-                </p>
+            {!isMobile && (
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
+                    Bouw- en Structuurwerken
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg hidden lg:block">
+                    Structurele muurwerken en renovaties
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
-          <div className="relative group aspect-[3/2]">
-            {isMobile ? (
-              <img
-                src={projectImage5}
-                alt="Project 5"
+          <div
+            className="relative group aspect-[3/2]"
+            onClick={() => handleVideoClick("video2b")}
+          >
+            {videoStates.video2b || !isMobile ? (
+              <video
+                src={projectVideo2b}
                 className="w-full h-full object-cover"
+                controls={isMobile}
+                autoPlay={!isMobile}
+                loop={!isMobile}
+                muted={!isMobile}
               />
             ) : (
               <video
                 src={projectVideo2b}
                 className="w-full h-full object-cover"
-                autoPlay
-                loop
                 muted
               />
             )}
-            <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
-              <div className="text-center text-white px-4">
-                <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
-                  Decoratieve Pleistertoepassingen
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg hidden lg:block">
-                  Gedetailleerd vakmanschap en unieke oppervlaktedesigns in
-                  pleisterwerk
-                </p>
+            {!isMobile && (
+              <div className="absolute inset-0 bg-blue-900 bg-opacity-75 opacity-0 group-hover:opacity-100 transition duration-300 flex justify-center items-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="text-xs sm:text-xl md:text-2xl font-bold mb-2">
+                    Decoratieve Pleistertoepassingen
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg hidden lg:block">
+                    Gedetailleerd vakmanschap en unieke oppervlaktedesigns in
+                    pleisterwerk
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
