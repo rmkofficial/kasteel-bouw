@@ -2,13 +2,16 @@ import { useForm, ValidationError } from "@formspree/react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 const ContactSection = () => {
   const [state, handleSubmit] = useForm("movazgow");
 
-  if (state.succeeded) {
-    toast.success("Bericht is succesvol verzonden!");
-  }
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Bericht is succesvol verzonden!");
+    }
+  }, [state.succeeded]);
 
   return (
     <section className="py-16 bg-gray-100">
@@ -39,6 +42,7 @@ const ContactSection = () => {
               type="text"
               name="fullName"
               placeholder="Naam"
+              aria-label="Naam" 
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="fullName" errors={state.errors} />
@@ -47,6 +51,7 @@ const ContactSection = () => {
               type="email"
               name="email"
               placeholder="E-mailadres"
+              aria-label="E-mailadres"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="email" errors={state.errors} />
@@ -55,6 +60,7 @@ const ContactSection = () => {
               type="text"
               name="phone"
               placeholder="Telefoonnummer"
+              aria-label="Telefoonnummer"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="phone" errors={state.errors} />
@@ -63,6 +69,7 @@ const ContactSection = () => {
               type="text"
               name="address"
               placeholder="Adres"
+              aria-label="Adres"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full focus:outline-none focus:border-red-600"
             />
             <ValidationError field="address" errors={state.errors} />
@@ -71,6 +78,7 @@ const ContactSection = () => {
               name="message"
               rows="4"
               placeholder="Bericht..."
+              aria-label="Bericht"
               className="p-3 text-sm border border-gray-300 rounded-lg shadow-sm w-full col-span-2 focus:outline-none focus:border-red-600"
             ></textarea>
             <ValidationError field="message" errors={state.errors} />
@@ -80,6 +88,7 @@ const ContactSection = () => {
             type="submit"
             disabled={state.submitting}
             className="bg-red-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition duration-300 w-full md:w-auto"
+            aria-label="Bericht Versturen"
           >
             Bericht Versturen →
           </button>
